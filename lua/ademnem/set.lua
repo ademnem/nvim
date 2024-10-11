@@ -1,7 +1,7 @@
 -- Set Options File
 
 local set = vim.opt
-
+local autocmd = vim.api.nvim_create_autocmd
 
 -- Cursor
 set.guicursor = ""
@@ -48,3 +48,20 @@ set.termguicolors = true
 -- Fast Update Time
 set.updatetime = 50
 
+
+-- Remove New Line Comments
+autocmd({ "BufEnter", "BufNewFile" }, {
+    callback = function()
+        vim.o.showtabline = 0
+    end,
+    group = general,
+    desc = "Disable Tabline",
+})
+
+autocmd("BufEnter", {
+    callback = function()
+        vim.opt.formatoptions:remove { "c", "r", "o" }
+    end,
+    group = general,
+    desc = "Disable New Line Comment",
+})
