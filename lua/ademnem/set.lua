@@ -9,7 +9,7 @@ set.guicursor = ""
 
 -- Line Numbers
 set.nu = true
-set.relativenumber = true  
+set.relativenumber = true
 
 
 -- Line Wrap
@@ -19,7 +19,7 @@ set.wrap = false
 -- Tabs and Indentations
 set.shiftwidth = 4 -- spaces per tab (when shifting)
 set.tabstop = 4 -- spaces per tab
-set.softtabstop = 4 
+set.softtabstop = 4
 set.expandtab = true
 set.smartindent = true
 
@@ -54,7 +54,6 @@ autocmd({ "BufEnter", "BufNewFile" }, {
     callback = function()
         vim.o.showtabline = 0
     end,
-    group = general,
     desc = "Disable Tabline",
 })
 
@@ -62,6 +61,5 @@ autocmd("BufEnter", {
     callback = function()
         vim.opt.formatoptions:remove { "c", "r", "o" }
     end,
-    group = general,
     desc = "Disable New Line Comment",
 })
