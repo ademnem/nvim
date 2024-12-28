@@ -4,8 +4,6 @@ vim.g.maplocalleader = "\\"
 
 --[[ REMAPS ]]--
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>vs", vim.cmd.vs)
-vim.keymap.set("n", "<leader>hs", vim.cmd.sp)
 
 -- "* or "+ for copy into clipboard?
 
