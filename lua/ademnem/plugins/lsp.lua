@@ -5,8 +5,8 @@ return
     {"williamboman/mason-lspconfig.nvim"},
 
     -- LSP Complete Solution
-    {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
 
     -- Rustaceanvim for Rust LSP
     {
