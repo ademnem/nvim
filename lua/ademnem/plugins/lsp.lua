@@ -8,54 +8,18 @@ return
     {'hrsh7th/nvim-cmp'},
     {'hrsh7th/cmp-nvim-lsp'},
 
-    -- Rustaceanvim for Rust LSP
-    {
-        'mrcjkb/rustaceanvim',
-        version = '^5', -- Recommended
-        lazy = false, -- This plugin is already lazy
-        config = function()
-            vim.g.rustaceanvim = {
-                -- Plugin configuration
-                tools = {
-                },
-                -- LSP configuration
-                server = {
-                    --[[
-                    on_attach = function(client, bufnr)
-                        -- you can also put keymaps in here
-                    end,
-                    ]]--
-                    default_settings = {
-                        -- rust-analyzer language server configuration
-                        ['rust-analyzer'] = {
-                        },
-                    },
-                },
-                -- DAP configuration
-                dap = {
-                },
-            }
-        end,
-    },
-
     -- NeoVim LSP Config
     {
         'neovim/nvim-lspconfig',
         config = function()
 
             -- MASON CONFIG
-            local noop = function() end
-
             require('mason').setup({})
             require('mason-lspconfig').setup({
                 -- Replace the language servers listed here 
                 -- with the ones you want to install
-                ensure_installed = {
-                    'clangd',
-                    'lua_ls',
-                    'rust_analyzer'},
+                ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer' },
                 handlers = {
-                    rust_analyzer = noop,
                     function(server_name)
                         require('lspconfig')[server_name].setup({})
                     end,
@@ -100,7 +64,7 @@ return
             local cmp = require('cmp')
             cmp.setup({
                 sources = {
-                    {name = 'nvim_lsp'},
+                    { name = 'nvim_lsp' },
                 },
                 snippet = {
                     expand = function(args)
