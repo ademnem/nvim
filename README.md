@@ -9,6 +9,12 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 
 ## Future Addiitions
 - nerd font (for my terminal)
+- linter (nvim-lint)
+- formatter (nvim-conform)
 
 ## Unrelated Information
 I currently use WSL2 Ubuntu on PowerShell. I find a block cursor makes the most sense for me on Vim which can be configured on PowerShell.
+
+## Configs I Learned From
+- [folke's dot files](https://github.com/folke/dot)
+- [LazyVim (also folke)](https://github.com/LazyVim/LazyVim)
