@@ -1,36 +1,21 @@
 return
 {
-    -- LSP Manager  
-    {"williamboman/mason.nvim"},
-    {"williamboman/mason-lspconfig.nvim"},
+    -- LSP Downloads Manager  
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
 
-    -- LSP Complete Solution
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
+
+    -- Autocomplete
+    { 'hrsh7th/nvim-cmp' },
+    { 'hrsh7th/cmp-nvim-lsp' },
 
     -- NeoVim LSP Config
     {
         'neovim/nvim-lspconfig',
         config = function()
 
-            -- MASON CONFIG
-            require('mason').setup({})
-            require('mason-lspconfig').setup({
-                -- Replace the language servers listed here 
-                -- with the ones you want to install
-                ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer' },
-                handlers = {
-                    function(server_name)
-                        require('lspconfig')[server_name].setup({})
-                    end,
-                },
-            })
-
-
-            -- EXTEND NVIM-LSPCONFIG
             vim.opt.signcolumn = 'yes'
-
-            -- Add cmp_nvim_lsp capabilities settings to lspconfig
+            -- Add cmp_nvim_lsp capabilities settings to lspconfig 
             -- This should be executed before you configure any language server
             local lspconfig_defaults = require('lspconfig').util.default_config
             lspconfig_defaults.capabilities = vim.tbl_deep_extend(
@@ -39,6 +24,41 @@ return
                 require('cmp_nvim_lsp').default_capabilities()
             )
 
+
+            --[[ Mandatory Load Order
+                1. mason
+                2. mason-lspconfig
+                3. nvim-lspconfig
+            ]]--
+            require('mason').setup({})
+            require('mason-lspconfig').setup({
+                ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer' },
+                handlers = {
+                    -- documentation = ':h mason-lspconfig-automatic-server-setup'
+
+                    -- default handler
+                    function(server_name)
+                        require('lspconfig')[server_name].setup({})
+                    end,
+
+                    -- lua specific setup 
+                    ['lua_ls'] = function ()
+                        local lspconfig = require('lspconfig')
+                        lspconfig.lua_ls.setup {
+                            settings = {
+                                Lua = {
+                                    diagnostics = {
+                                        globals = { 'vim' }
+                                    }
+                                }
+                            }
+                        }
+                    end,
+                }
+            })
+
+
+            -- Part of NVIM-CMP
             -- This is where you enable features that only work
             -- if there is a language server active in the file
             vim.api.nvim_create_autocmd('LspAttach', {
