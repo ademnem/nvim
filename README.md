@@ -15,6 +15,13 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 ## Unrelated Information
 I currently use WSL2 Ubuntu on PowerShell. I find a block cursor makes the most sense for me on Vim which can be configured on PowerShell.
 
+## Regarding the Rust LSP
+My Rust LSP configuration has had issues specificially with the error code `rust-analyzer: -32802: server cancelled the request`. In order to solve this I have:
+1. Rewritten the LSP config multiple times
+2. Executed `mv ~/.cargo/bin/rust-analyzer ~/.backup/rust-analyzer`
+
+The second one seems to have actually solved the issue but only time will tell.
+
 ## Configs I Learned From
 - [folke's dot files](https://github.com/folke/dot)
 - [LazyVim (also folke)](https://github.com/LazyVim/LazyVim)
