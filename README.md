@@ -11,6 +11,7 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - nerd font (for my terminal)
 - linter (nvim-lint)
 - formatter (nvim-conform)
+- rewrite lsp again 😭
 
 ## Unrelated Information
 I currently use WSL2 Ubuntu on PowerShell. I find a block cursor makes the most sense for me on Vim which can be configured on PowerShell.
