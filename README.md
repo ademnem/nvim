@@ -7,7 +7,7 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - C compiler
 - ripgrep
 
-## Future Addiitions
+## Future Additions
 - nerd font (for my terminal)
 - linter (nvim-lint)
 - formatter (nvim-conform)
