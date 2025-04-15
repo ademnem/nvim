@@ -1,5 +1,3 @@
-local builtin = require('telescope.builtin')
-
 return
 {
 	'nvim-telescope/telescope.nvim',
@@ -7,8 +5,8 @@ return
     dependencies = { 'nvim-lua/plenary.nvim' },
 	lazy = false,
     keys = {
-        { '<leader>pf', builtin.find_files, desc = 'telescope project find files' },
-        { '<leader>gf', builtin.git_files, desc = 'git file search' },
-        { '<leader>ps', function() builtin.grep_string({ search = vim.fn.input("Grep > ") }); end, desc = 'ripgrep' },
+        { '<leader>pf', require('telescope.builtin').find_files, desc = 'telescope project find files' },
+        { '<leader>gf', require('telescope.builtin').git_files, desc = 'git file search' },
+        { '<leader>ps', function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") }); end, desc = 'ripgrep' },
     },
 }
