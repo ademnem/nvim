@@ -5,8 +5,9 @@ return
     dependencies = { 'nvim-lua/plenary.nvim' },
 	lazy = false,
     keys = {
-        { '<leader>pf', require('telescope.builtin').find_files, desc = 'telescope project find files' },
-        { '<leader>gf', require('telescope.builtin').git_files, desc = 'git file search' },
-        { '<leader>ps', function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") }); end, desc = 'ripgrep' },
+        { '<leader>ds', require('telescope.builtin').find_files, desc = 'directory search' },
+        { '<leader>ws', require('telescope.builtin').live_grep, desc = 'word search (using ripgrep)' },
+        { '<leader>ff', require('telescope.builtin').current_buffer_fuzzy_find, desc = 'fuzzy find in current buffer' },
+        { '<leader>gf', require('telescope.builtin').git_files, desc = 'search for files tracked by git' },
     },
 }
