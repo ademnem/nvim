@@ -9,7 +9,7 @@ set.guicursor = ""
 
 -- Line Numbers
 set.nu = true
-set.relativenumber = true
+-- set.relativenumber = true
 
 
 -- Line Wrap
