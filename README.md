@@ -3,18 +3,27 @@ These are my current configurations for Neovim. You are more than welcome to cop
 
 ## Requirements
 These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree/main)
-- neovim >= 0.9.0 (recommend to download from source)
+- neovim >= 0.9.0 (personally I use snap but downloading from source works too)
 - C compiler
 - ripgrep
+- nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
 
 ## Future Additions
-- nerd font (for my terminal)
 - linter (nvim-lint)
 - formatter (nvim-conform)
 - rewrite lsp again 😭
 
 ## Unrelated Information
 I currently use WSL2 Ubuntu on PowerShell. I find a block cursor makes the most sense for me on Vim which can be configured on PowerShell.
+
+# How to get NerdFont
+If you are on Linux then you probably won't need this but just in case here is a [tutorial](https://medium.com/@almatins/install-nerdfont-or-any-fonts-using-the-command-line-in-debian-or-other-linux-f3067918a88c).
+
+Now if you are using Windows and WSL2 then you need to download a [Nerd Font](https://www.nerdfonts.com/font-downloads).
+1. unzip
+2. highlight all files ending in .ttf
+3. right click and hit install
+4. go to powershell appearance settings and enable set the font to the font you just downloaded
 
 ## Regarding the Rust LSP
 My Rust LSP configuration has had issues specificially with the error code `rust-analyzer: -32802: server cancelled the request`. In order to solve this I have:
