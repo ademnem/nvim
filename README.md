@@ -34,5 +34,6 @@ My Rust LSP configuration has had issues specificially with the error code `rust
 The second one seems to have actually solved the issue but only time will tell.
 
 ## Configs I Learned From
+- [typecraft youtube tutorials](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
 - [folke's dot files](https://github.com/folke/dot)
 - [LazyVim (also folke)](https://github.com/LazyVim/LazyVim)
