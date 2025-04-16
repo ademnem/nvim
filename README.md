@@ -23,7 +23,8 @@ Now if you are using Windows and WSL2 then you need to download a [Nerd Font](ht
 1. unzip
 2. highlight all files ending in .ttf
 3. right click and hit install
-4. go to powershell appearance settings and enable set the font to the font you just downloaded
+4. go to Command Prompt/Windows PowerShell appearance settings and enable set the font to the font you just downloaded
+    - ideally you would change the Defaults profile setting to Nerd Font so that it applies across all terminal applications
 
 ## Regarding the Rust LSP
 My Rust LSP configuration has had issues specificially with the error code `rust-analyzer: -32802: server cancelled the request`. In order to solve this I have:
