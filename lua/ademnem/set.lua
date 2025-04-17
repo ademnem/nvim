@@ -4,7 +4,7 @@ local set = vim.opt
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Cursor
-set.guicursor = ""
+set.guicursor = 'n:blinkon0'
 
 
 -- Line Numbers
