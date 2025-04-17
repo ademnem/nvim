@@ -13,8 +13,8 @@ return
             'williamboman/mason.nvim',
         },
         opts = {
-            ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer' },
-            handlers = {
+            ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer'},
+            handlers = { -- :h mason-lspconfig.setup()
                 -- default handler
                 function(server_name)
                     require('lspconfig')[server_name].setup({})
@@ -55,17 +55,6 @@ return
                 require('cmp_nvim_lsp').default_capabilities()
             )
 
-
-            --[[ Mandatory Load Order
-                1. mason
-                2. mason-lspconfig
-                3. nvim-lspconfig
-            ]]--
-
-
-            -- Part of NVIM-CMP
-            -- This is where you enable features that only work
-            -- if there is a language server active in the file
             vim.api.nvim_create_autocmd('LspAttach', {
                 desc = 'LSP actions',
                 callback = function(event)
@@ -80,7 +69,7 @@ return
                     vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
                     vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
                     vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-                    vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+                    vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
                 end,
             })
 
