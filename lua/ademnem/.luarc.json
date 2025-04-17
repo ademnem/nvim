@@ -7,7 +7,9 @@
   "diagnostics.globals": ["vim",
         "local",
         "global",
-        "null_ls"],
+        "null_ls",
+        "setup_formatter",
+        "formatters"],
   "workspace.checkThirdParty": false,
   "workspace.library": [
     "$VIMRUNTIME"
