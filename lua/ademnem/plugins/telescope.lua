@@ -6,8 +6,8 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		lazy = false,
 		keys = {
-			{ "<leader>ds", require("telescope.builtin").find_files, desc = "directory search" },
-			{ "<leader>ws", require("telescope.builtin").live_grep, desc = "word search (using ripgrep)" },
+			{ "<leader>df", require("telescope.builtin").find_files, desc = "directory find" },
+			{ "<leader>sf", require("telescope.builtin").live_grep, desc = "string find (using ripgrep)" },
 			{
 				"<leader>ff",
 				require("telescope.builtin").current_buffer_fuzzy_find,

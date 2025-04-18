@@ -2,6 +2,7 @@ return {
 	-- LSP Downloads Manager
 	{
 		"williamboman/mason.nvim",
+		cmd = "Mason",
 		build = ":MasonUpdate",
 		opts = {},
 	},
