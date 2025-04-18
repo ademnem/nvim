@@ -1,3 +1,5 @@
+return {}
+--[[
 return {
     "nvimtools/none-ls.nvim",
     lazy = false,
@@ -45,3 +47,4 @@ return {
         null_ls.setup({ sources = sources })
     end,
 }
+]]--
