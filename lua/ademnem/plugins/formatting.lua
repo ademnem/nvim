@@ -1,28 +1,44 @@
 return {
 	"stevearc/conform.nvim",
 	dependencies = { "mason.nvim" },
-	lazy = false,
+	event = { "BufWritePre" },
+	cmd = { "ConformInfo" },
 	keys = {
 		{
 			"<leader>fb",
 			function()
-				require("conform").format({ timeout_ms = 500 })
+				require("conform").format({ async = true, lsp_format = "fallback" })
 			end,
 			mode = { "n", "v" },
-			desc = "format buffer",
+			desc = "[F]ormat [B]uffer",
 		},
 	},
-	opts = function()
-		local opts = {
-			formatters_by_ft = {
-				lua = { "stylua" },
-			},
-			format_on_save = {
-				timeout_ms = 300,
-				lsp_format = "fallback",
-			},
-		}
+	opts = {
+		notify_on_error = false,
+		format_on_save = function(bufnr)
+			-- disable "format_on_save lsp_fallback" for langs that don't have a standardized coding style
+			local disable_filetypes = { c = true, cpp = true }
+			if disable_filetypes[vim.bo[bufnr].filetype] then
+				return nil
+			else
+				return {
+					timeout_ms = 500,
+					lsp_format = "fallback",
+				}
+			end
+		end,
+		formatters_by_ft = {
+			lua = { "stylua" },
+			-- Conform can also run multiple formatters sequentially
+			-- python = { "isort", "black" },
+			--
+			-- You can use 'stop_after_first' to run the first available formatter from the list
+			-- javascript = { "prettierd", "prettier", stop_after_first = true },,
+		},
+	},
 
+	-- download formatters through mason-tool-installer.nvim in lsp.lua
+	--[[
 		local registry = require("mason-registry")
 		local Package = require("mason-core.package")
 		for _, formatters in pairs(opts.formatters_by_ft) do
@@ -34,7 +50,6 @@ return {
 				end
 			end
 		end
-
-		return opts
-	end,
+        ]]
+	--
 }

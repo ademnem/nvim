@@ -1,10 +1,9 @@
-return
-{
+return {
 	"tpope/vim-fugitive",
 	lazy = false,
-    keys = {
-        { "<leader>gs", vim.cmd.Git, desc = "Git" }
-        --[[ 
+	keys = {
+		{ "<leader>gs", vim.cmd.Git, desc = "Git" },
+		--[[ 
         Keymappings in Fugitive
         - s = stage
         - u = unstage
@@ -16,6 +15,7 @@ return
         - ca = amend last commit and edit message
         - ce = amend last commit without editting
         - cw = reword last commit
-        ]]--
-    },
+        ]]
+		--
+	},
 }

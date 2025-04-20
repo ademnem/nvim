@@ -6,6 +6,7 @@ return {
 			"c",
 			"cpp",
 			"lua",
+			"luadoc",
 			"make",
 			"markdown",
 			"markdown_inline",
@@ -14,7 +15,6 @@ return {
 			"vimdoc",
 		},
 
-		sync_install = false,
 		auto_install = true,
 
 		highlight = {
