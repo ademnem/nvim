@@ -15,6 +15,7 @@
     "$VIMRUNTIME"
   ],
     "diagnostics.disable": [
-        "trailing-space"
+        "trailing-space",
+        "param-type-mismatch"
     ]
 }

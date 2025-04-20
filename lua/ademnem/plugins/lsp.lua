@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-doc-name, undefined-field
 return {
 
 	-- LSP Downloads Manager
@@ -144,6 +145,19 @@ return {
 
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local servers = {
+				clangd = {},
+				cssls = {},
+				html = {
+					format = {
+						templating = true,
+						wrapLineLength = 120,
+						wrapAttributes = "auto",
+					},
+					hover = {
+						documentation = true,
+						references = true,
+					},
+				},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -153,10 +167,12 @@ return {
 						},
 					},
 				},
-				clangd = {},
+				ts_ls = {},
 			}
 			local formatters = {
 				"stylua",
+				"prettier",
+				"prettierd",
 			}
 
 			local ensure_installed = vim.tbl_keys(servers or {})

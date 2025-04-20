@@ -12,6 +12,10 @@ set.nu = true
 
 -- Line Wrap
 set.wrap = false
+vim.api.nvim_create_user_command("ToggleTextWrap", function()
+	vim.wo.wrap = not vim.wo.wrap
+	print("TextWrap = " .. (vim.wo.wrap and "ON" or "OFF"))
+end, {})
 
 -- Tabs and Indentations
 set.shiftwidth = 4 -- spaces per tab (when shifting)

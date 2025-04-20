@@ -7,11 +7,10 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - C compiler
 - ripgrep
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
+- npm (for typescript lsp and formatters)
 
 ## Future Additions
-- linter (nvim-lint)
-- formatter (nvim-conform)
-- rewrite lsp again 😭
+- probably how to configure luasnip and lsps better
 
 ## Unrelated Information
 I currently use WSL2 Ubuntu on PowerShell. I find a block cursor makes the most sense for me on Vim which can be configured on PowerShell.
@@ -34,6 +33,11 @@ My Rust LSP configuration has had issues specificially with the error code `rust
 The second one seems to have actually solved the issue but only time will tell.
 
 ## Configs I Learned From
-- [typecraft youtube tutorials](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
-- [folke's dot files](https://github.com/folke/dot)
-- [LazyVim (also folke)](https://github.com/LazyVim/LazyVim)
+- just [TJ DeVries](https://github.com/tjdevries) (for everything, great youtube videos)
+- [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) (most beginner friendly setup, easy to read and follow along)
+- [typecraft youtube tutorials](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn) (has a nice nvim series for starters)
+- [folke's dot files](https://github.com/folke/dot) (because makes everything in neovim)
+- [LazyVim](https://github.com/LazyVim/LazyVim)
+
+# Advice for Newcomers (if you need it)
+I recommend starting from scratch and trying out your config after every addition. It is easy to copy and paste what others have or go watch a youtube tutorial (which I highly recommend watching multiple), but personally I found it most effective to slowly and consciously make each change.
