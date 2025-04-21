@@ -1,4 +1,4 @@
----@diagnostic disable: undefined-doc-name, undefined-field
+--@diagnostic disable: undefined-doc-name, undefined-field
 return {
 
 	-- LSP Downloads Manager
@@ -147,17 +147,7 @@ return {
 			local servers = {
 				clangd = {},
 				cssls = {},
-				html = {
-					format = {
-						templating = true,
-						wrapLineLength = 120,
-						wrapAttributes = "auto",
-					},
-					hover = {
-						documentation = true,
-						references = true,
-					},
-				},
+				html = {},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -170,13 +160,13 @@ return {
 				ts_ls = {},
 			}
 			local formatters = {
-				"stylua",
-				"prettier",
-				"prettierd",
+				stylua = {},
+				prettier = {},
+				prettierd = {},
 			}
 
 			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(ensure_installed, formatters)
+			vim.list_extend(ensure_installed, vim.tbl_keys(formatters or {}))
 
 			-- I can extend this list to include formatters and linters but that is handled separately
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

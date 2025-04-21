@@ -13,6 +13,11 @@ return {
 			"query",
 			"vim",
 			"vimdoc",
+
+			"css",
+			"html",
+			"javascript",
+			"typescript",
 		},
 
 		auto_install = true,
