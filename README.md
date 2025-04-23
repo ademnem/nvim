@@ -14,10 +14,16 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 ## Future Additions
 - probably how to configure luasnip and lsps better
 - figure out how to get a rust lsp working properly
+- write a bash script to auto-install and set up config along with dependencies
 
 ## Personal Set-up
 - WSL2 Ubuntu
 - block cursor
+- aliases in .bashrc
+    - `alias vim=nvim`
+    - `alias vi=nvim`
+    - `alias oldvim='\vim'`
+- use nvim as man page viewer through `export MANPAGER='nvim +Man!'`
 
 # How to get NerdFont
 If you are on Linux then you probably won't need this but just in case here is a [tutorial](https://medium.com/@almatins/install-nerdfont-or-any-fonts-using-the-command-line-in-debian-or-other-linux-f3067918a88c).
