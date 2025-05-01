@@ -10,6 +10,7 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - ripgrep
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
 - npm (for typescript lsp and formatters)
+- ubuntu v24.04
 
 ## Future Additions
 - probably how to configure luasnip and lsps better
