@@ -1,4 +1,8 @@
-# NVIM Configuration File
+# Configuration Files
+These are my config files. For now I only have Neovim and Tmux. Enjoy :D
+
+
+# NVIM Configurations
 These are my current configurations for Neovim. You are more than welcome to copy if you would like but these configurations are constantly changing so copy at your own risk. I highly recommend learning on your own from the ground up for a better experience :D.
 
 Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if you want somewhere to start.
@@ -13,6 +17,8 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - ubuntu v24.04
 
 ## Future Additions
+- mason.nvim is getting major update so i need to change that soon
+- debugger (because i code in languages other than RUST)
 - probably how to configure luasnip and lsps better
 - figure out how to get a rust lsp working properly
 - write a bash script to auto-install and set up config along with dependencies
@@ -40,5 +46,5 @@ Now if you are using Windows and WSL2 then you need to download a [Nerd Font](ht
 - just [TJ DeVries](https://github.com/tjdevries) (for everything, great youtube videos)
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) (most beginner friendly setup, easy to read and follow along)
 - [typecraft youtube tutorials](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn) (has a nice nvim series for starters)
-- [folke's dot files](https://github.com/folke/dot) (because makes everything in neovim)
+- [folke's dot files](https://github.com/folke/dot) (makes everything in neovim)
 - [LazyVim](https://github.com/LazyVim/LazyVim)
