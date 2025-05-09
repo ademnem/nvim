@@ -1,7 +1,3 @@
-# Configuration Files
-These are my config files. For now I only have Neovim and Tmux. Enjoy :D
-
-
 # NVIM Configurations
 These are my current configurations for Neovim. You are more than welcome to copy if you would like but these configurations are constantly changing so copy at your own risk. I highly recommend learning on your own from the ground up for a better experience :D.
 
