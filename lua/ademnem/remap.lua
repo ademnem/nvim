@@ -27,8 +27,7 @@ end)
 
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
---[[ VISUAL EFFECTS ]]
---
+-- VISUAL EFFECTS
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
@@ -36,3 +35,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+-- Clipboard
+vim.keymap.set({ "n", "v" }, "y", '"+y')
+vim.keymap.set({ "n", "v" }, "p", '"+p')

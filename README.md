@@ -3,21 +3,28 @@ These are my current configurations for Neovim. You are more than welcome to cop
 
 Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if you want somewhere to start.
 
+## When you add a new language
+- treesitter
+- lsp (linter builtin or not?)
+- formatter
+
 ## Requirements
 These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree/main)
-- neovim >= 0.9.0 (personally I use snap but downloading from source works too)
+- neovim >= 0.11.0 (download from source)
 - C compiler
 - ripgrep
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
-- npm (for typescript lsp and formatters)
-- ubuntu v24.04
+- npm (for lsps and formatters)
+- xclip (for yanking to clipboard)
+
 
 ## Future Additions
-- mason.nvim is getting major update so i need to change that soon
-- debugger (because i code in languages other than RUST)
-- probably how to configure luasnip and lsps better
-- figure out how to get a rust lsp working properly
-- write a bash script to auto-install and set up config along with dependencies
+- [X] mason.nvim is getting major update so i need to change that soon
+- [ ] debugger (because i code in languages other than RUST)
+- [ ] probably how to configure luasnip and lsps better
+- [ ] figure out how to get a rust lsp working properly
+- [ ] write a bash script to auto-install and set up config along with dependencies
+- [ ] lualine shows commands (use [noice.nvim](https://github.com/nvim-lualine/lualine.nvim/issues/868)) and cmdheight = 0
 
 ## Personal Set-up
 - WSL2 Ubuntu
@@ -39,8 +46,7 @@ Now if you are using Windows and WSL2 then you need to download a [Nerd Font](ht
     - ideally you would change the Defaults profile setting to Nerd Font so that it applies across all terminal applications
 
 ## Configs I Learned From
+- [MrJakob](https://www.youtube.com/watch?v=g1gyYttzxcI&list=PLy68GuC77sURrnMNi2XR1h58m674KOvLG) (best series)
 - just [TJ DeVries](https://github.com/tjdevries) (for everything, great youtube videos)
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) (most beginner friendly setup, easy to read and follow along)
-- [typecraft youtube tutorials](https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn) (has a nice nvim series for starters)
 - [folke's dot files](https://github.com/folke/dot) (makes everything in neovim)
-- [LazyVim](https://github.com/LazyVim/LazyVim)
