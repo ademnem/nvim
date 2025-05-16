@@ -1,16 +1,14 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
---[[ REMAPS ]]
---
+-- REMAPS
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>vs", vim.cmd.vs)
 vim.keymap.set("n", "<leader>hs", vim.cmd.sp)
 
 -- "* or "+ for copy into clipboard?
 
---[[ TERMINAL ]]
---
+-- TERMINAL
 vim.api.nvim_create_autocmd("TermOpen", {
 	group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
 	callback = function()
@@ -36,6 +34,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- Clipboard
-vim.keymap.set({ "n", "v" }, "y", '"+y')
-vim.keymap.set({ "n", "v" }, "p", '"+p')
+-- COPY TO SYSTEM CLIPBOARD
+vim.keymap.set({ "n", "v" }, "<C-y>", '"+y')
+vim.keymap.set({ "n", "v" }, "<C-p>", '"+p')
+vim.keymap.set({ "n", "v" }, "<C-d>", '"+d')

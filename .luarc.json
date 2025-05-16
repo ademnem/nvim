@@ -5,6 +5,10 @@
         ]
     },
     "diagnostics.disable": [
-        "missing-fields"
+        "missing-fields",
+        "undefined-doc-name",
+        "unused-function",
+        "unused-local",
+        "undefined-field"
     ],
 }

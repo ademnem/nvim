@@ -14,7 +14,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Line Wrap
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.api.nvim_create_user_command("ToggleTextWrap", function()
 	vim.wo.wrap = not vim.wo.wrap
 	print("TextWrap = " .. (vim.wo.wrap and "ON" or "OFF"))
