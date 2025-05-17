@@ -1,4 +1,3 @@
----@diagnostic disable: undefined-doc-name
 return {
 	"saghen/blink.cmp",
 	dependencies = {
@@ -25,10 +24,31 @@ return {
 			nerd_font_variant = "normal",
 		},
 
-		completion = { documentation = { auto_show = false } },
+		completion = {
+			list = { max_items = 3 },
+			documentation = { auto_show = false },
+		},
 
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "buffer", "lsp", "path", "snippets" },
+			providers = {
+				buffer = {
+					min_keyword_length = 0,
+					score_offset = 4,
+				},
+				lsp = {
+					min_keyword_length = 1,
+					score_offset = 3,
+				},
+				path = {
+					min_keyword_length = 2,
+					score_offset = 2,
+				},
+				snippets = {
+					min_keyword_length = 3,
+					score_offset = 1,
+				},
+			},
 		},
 
 		fuzzy = { implementation = "prefer_rust_with_warning" },
