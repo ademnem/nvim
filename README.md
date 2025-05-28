@@ -20,6 +20,7 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 
 ## Future Additions
 - [X] mason.nvim is getting major update so i need to change that soon
+- [ ] treesitter got updates so now i need to reconfigure that
 - [ ] debugger (because i code in languages other than RUST)
 - [ ] probably how to configure luasnip and lsps better
 - [ ] figure out how to get a rust lsp working properly
