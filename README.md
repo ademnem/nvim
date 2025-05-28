@@ -19,16 +19,13 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 
 
 ## Future Additions
-- [X] mason.nvim is getting major update so i need to change that soon
-- [ ] treesitter got updates so now i need to reconfigure that
-- [ ] debugger (because i code in languages other than RUST)
-- [ ] probably how to configure luasnip and lsps better
-- [ ] figure out how to get a rust lsp working properly
-- [ ] write a bash script to auto-install and set up config along with dependencies
-- [ ] lualine shows commands (use [noice.nvim](https://github.com/nvim-lualine/lualine.nvim/issues/868)) and cmdheight = 0
+- treesitter got updates so now i need to reconfigure that (update to main branch for more updates)
+- debugger (because i code in languages other than RUST)
+- probably learn how to configure luasnip and lsps better
+- lualine shows commands (use [noice.nvim](https://github.com/nvim-lualine/lualine.nvim/issues/868)) and cmdheight = 0
 
 ## Personal Set-up
-- WSL2 Ubuntu
+- Linux Mint
 - block cursor
 - aliases in .bashrc
     - `alias vim=nvim`
