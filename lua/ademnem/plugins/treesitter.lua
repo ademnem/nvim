@@ -1,6 +1,8 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		branch = "master",
+		lazy = false,
 		build = ":TSUpdate",
 		config = function()
 			local configs = require("nvim-treesitter.configs")
@@ -38,7 +40,7 @@ return {
 					enable = true,
 					keymaps = {
 						init_selection = "<Enter>", -- set to `false` to disable one of the mappings
-						node_incremental = "<Ejnter>",
+						node_incremental = "<Enter>",
 						scope_incremental = false,
 						node_decremental = "<backspace>",
 					},
@@ -65,7 +67,11 @@ return {
 							-- nvim_buf_set_keymap) which plugins like which-key display
 							["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
 							-- You can also use captures from other query groups like `locals.scm`
-							["os"] = { query = "@local.scope", query_group = "locals", desc = "Select language scope" },
+							["os"] = {
+								query = "@local.scope",
+								query_group = "locals",
+								desc = "Select language scope",
+							},
 						},
 						-- You can choose the select mode (default is charwise 'v')
 						--
