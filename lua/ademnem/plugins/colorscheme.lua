@@ -5,7 +5,9 @@ return {
 		priority = 1000, -- default priority is 50
 		config = function()
 			require("rose-pine").setup({
-				transparent = true,
+				styles = {
+					transparency = true,
+				},
 				overrides = function(colors)
 					return {
 						["@markup.link.url.markdown_inline"] = { link = "Special" }, -- (url)
