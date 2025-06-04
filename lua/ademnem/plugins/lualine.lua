@@ -3,8 +3,6 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	event = "VeryLazy",
 	config = function()
-		-- trying to expose command line
-		-- might need to try noice.nvim
 		local custom_rose_pine = require("lualine.themes.rose-pine")
 		custom_rose_pine.normal.c.fg = ""
 
