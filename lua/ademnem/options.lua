@@ -5,7 +5,7 @@ vim.opt.guicursor = "n:blinkon0"
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.showmode = true -- show editor mode in command line
-vim.opt.cmdheight = 1 -- height of command line
+vim.opt.cmdheight = 0 -- height of command line
 vim.opt.signcolumn = "yes" -- signcolumn is on by default
 vim.opt.scrolloff = 6 -- min lines to keep above and below cursor
 

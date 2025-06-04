@@ -5,45 +5,21 @@ return {
 	config = function()
 		-- trying to expose command line
 		-- might need to try noice.nvim
-		--[[
-		local ns = vim.api.nvim_create_namespace("showcmd_msg")
-		local showcmd_msg
-		vim.ui_attach(ns, { ext_messages = true }, function(event, ...)
-			if event == "msg_showcmd" then
-				local content = ...
-				showcmd_msg = #content > 0 and content[1][2] or ""
-			end
-		end)
-		]]
-		--
+		local custom_rose_pine = require("lualine.themes.rose-pine")
+		custom_rose_pine.normal.c.fg = ""
 
 		require("lualine").setup({
 			options = {
-				theme = "rose-pine",
+				theme = custom_rose_pine,
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = { "alpha", "Outline" },
 			},
 			sections = {
 				lualine_a = {
-					{ "mode" },
+					{ "mode", separator = { right = "" } },
 				},
 				lualine_b = {
-					--[[
-					function()
-						return showcmd_msg
-					end,
-					]]
-				},
-				lualine_c = {},
-				lualine_x = {
-					{
-						"diagnostics",
-						symbols = { error = " ", warn = " ", info = " ", hint = " " },
-						update_in_insert = true,
-					},
-				},
-				lualine_y = {
 					{
 						"filetype",
 						icon_only = true,
@@ -52,8 +28,28 @@ return {
 					},
 					"filename",
 				},
+				lualine_c = {
+					{
+						"branch",
+						icon = { "" },
+						colored = false,
+					},
+					{
+						"diff",
+						symbols = { added = " ", modified = " ", removed = " " },
+						colored = false,
+					},
+				},
+				lualine_x = {
+					{
+						"diagnostics",
+						symbols = { error = " ", warn = " ", info = " ", hint = " " },
+						update_in_insert = true,
+					},
+				},
+				lualine_y = {},
 				lualine_z = {
-					{ "location", icon = "" },
+					{ "location", separator = { left = "" }, icon = "" },
 				},
 			},
 			inactive_sections = {
