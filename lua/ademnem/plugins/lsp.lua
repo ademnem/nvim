@@ -5,7 +5,16 @@ return {
 			{ "mason-org/mason.nvim", build = ":MasonUpdate", opts = {} },
 			"mason-org/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			{ "j-hui/fidget.nvim", opts = {} },
+			{
+				"j-hui/fidget.nvim",
+				opts = {
+					notification = {
+						window = {
+							winblend = 0, -- makes background color transparent
+						},
+					},
+				},
+			},
 			"saghen/blink.cmp",
 		},
 		config = function()
