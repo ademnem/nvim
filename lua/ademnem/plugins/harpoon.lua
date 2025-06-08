@@ -5,11 +5,11 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
 		{
-			"<leader>hm",
+			"<leader>hl",
 			function()
 				require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
 			end,
-			desc = "[H]arpoon [M]enu",
+			desc = "[H]arpoon [L]ist",
 		},
 		{
 			"<leader>ha",
