@@ -47,6 +47,13 @@ return {
 			desc = "[H]arpoon 4",
 		},
 		{
+			"<leader>h5",
+			function()
+				require("harpoon"):list():select(5)
+			end,
+			desc = "[H]arpoon 5",
+		},
+		{
 			"<leader>hp",
 			function()
 				require("harpoon"):list():prev()
