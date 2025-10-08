@@ -14,7 +14,7 @@ return {
 			css = { "prettierd", "prettier", stop_after_first = true },
 			html = { "prettierd", "prettier", stop_after_first = true },
 			javascript = { "prettierd", "prettier", stop_after_first = true },
-			python = { "ruff" },
+			python = { "ruff_format" },
 			rust = { "rustfmt", lsp_format = "fallback" },
 		},
 	},
