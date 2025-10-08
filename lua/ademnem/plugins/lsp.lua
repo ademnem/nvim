@@ -119,6 +119,7 @@ return {
 						},
 					},
 				},
+				pyright = {},
 				rust_analyzer = {},
 				ts_ls = {},
 			}
@@ -128,7 +129,8 @@ return {
 			vim.list_extend(ensure_installed, {
 				"stylua",
 				"prettier",
-				"prettierd",
+				"prettierd", -- for javascript and such
+				"ruff", -- python formatter
 				-- "rustfmt", install via rustup
 			})
 
