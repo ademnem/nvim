@@ -99,6 +99,7 @@ return {
 			--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+			-- ':h lspconfig-all' to get help on setup
 			local servers = {
 				bashls = {},
 				clangd = {},
@@ -119,7 +120,7 @@ return {
 						},
 					},
 				},
-				pyright = {},
+				ruff = {},
 				rust_analyzer = {},
 				ts_ls = {},
 			}
@@ -130,7 +131,6 @@ return {
 				"stylua",
 				"prettier",
 				"prettierd", -- for javascript and such
-				"ruff", -- python formatter
 				-- "rustfmt", install via rustup
 			})
 
