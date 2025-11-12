@@ -1,3 +1,4 @@
+line-length = 120
+
 [format]
 quote-style = "single"
-line-length = 120
