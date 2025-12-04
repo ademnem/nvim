@@ -3,6 +3,10 @@ These are my current configurations for Neovim. You are more than welcome to cop
 
 Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if you want somewhere to start.
 
+## TODO
+1. learn builtin grep across file function (change to use ripgrep)
+2. is there a better way to setup lsps?
+
 ## When you add a new language
 - treesitter
 - lsp (linter builtin or not?)
