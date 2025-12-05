@@ -5,7 +5,10 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
 
 ## TODO
 1. learn builtin grep across file function (change to use ripgrep)
+    - :h grep 
+    - :copen for quickfix list
 2. is there a better way to setup lsps?
+3. ultimately make config more simple and reliant on builtin functionalities 
 
 ## When you add a new language
 - treesitter
