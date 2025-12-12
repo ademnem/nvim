@@ -8,7 +8,8 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
     - :h grep 
     - :copen for quickfix list
 2. is there a better way to setup lsps?
-3. ultimately make config more simple and reliant on builtin functionalities 
+    - should i just use the builtin lspconfig?
+4. ultimately make config more simple and reliant on builtin functionalities 
 
 ## When you add a new language
 - treesitter
