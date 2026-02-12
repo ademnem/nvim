@@ -3,12 +3,15 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	event = "VeryLazy",
 	config = function()
-		local custom_rose_pine = require("lualine.themes.rose-pine")
-		custom_rose_pine.normal.c.fg = ""
+		local rose_pine = require("lualine.themes.rose-pine")
+		rose_pine.normal.c.fg = ""
+		-- Extend terminal here after you figure out what color you want (lime green?)
+		-- rose_pine.terminal = rose_pine.normal
+		-- rose_pine.terminal.c.bg = "#000000"
 
 		require("lualine").setup({
 			options = {
-				theme = custom_rose_pine,
+				theme = rose_pine,
 				component_separators = "",
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = { "alpha", "Outline" },

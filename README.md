@@ -7,14 +7,13 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
 1. learn builtin grep across file function (change to use ripgrep)
     - :h grep 
     - :copen for quickfix list
-2. is there a better way to setup lsps?
-    - should i just use the builtin lspconfig?
-4. ultimately make config more simple and reliant on builtin functionalities 
+2. ultimately make config more simple and reliant on builtin functionalities 
 
 ## When you add a new language
 - treesitter
-- lsp (linter builtin or not?)
+- lsp (linter and/or formatter builtin or not?)
 - formatter
+- linter
 
 ## Requirements
 These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree/main)
@@ -29,12 +28,12 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 ## Future Additions
 - treesitter got updates so now i need to reconfigure that (update to main branch for more updates)
 - debugger (because i code in languages other than RUST)
-- probably learn how to configure luasnip and lsps better
+- probably learn how to configure snippets
 - lualine shows commands (use [noice.nvim](https://github.com/nvim-lualine/lualine.nvim/issues/868)) and cmdheight = 0
 
 ## Personal Set-up
 - Linux Mint
-- block cursor
+- block cursor, no blinking
 - aliases in .bashrc
     - `alias vim=nvim`
     - `alias vi=nvim`
@@ -56,3 +55,4 @@ Now if you are using Windows and WSL2 then you need to download a [Nerd Font](ht
 - just [TJ DeVries](https://github.com/tjdevries) (for everything, great youtube videos)
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) (most beginner friendly setup, easy to read and follow along)
 - [folke's dot files](https://github.com/folke/dot) (makes everything in neovim)
+- just at nvim plugins and see how they use builtin vim functions
