@@ -10,7 +10,7 @@ return {
 	},
 	init_options = {
 		settings = {
-			lineLength = 88, -- Black
+			lineLength = 125,
 			showSyntaxErrors = false, -- Redundant (handled by Pyright)
 			lint = {
 				-- Linter Configuration: These are the linters that I think will be
