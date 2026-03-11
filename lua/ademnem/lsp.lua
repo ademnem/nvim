@@ -17,6 +17,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			mode = mode or "n"
 			vim.keymap.set(mode, keys, func, { buffer = args.buf, desc = "LSP: " .. desc })
 		end
+
 		local tb = require("telescope.builtin")
 		map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 		map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
@@ -30,6 +31,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- Auto-format ("lint") on save.
 		-- Usually not needed if server supports "textDocument/willSaveWaitUntil".
+		-- check nvim-lspconfig/lsp for config help
 		if
 			not client:supports_method("textDocument/willSaveWaitUntil")
 			and client:supports_method("textDocument/formatting")

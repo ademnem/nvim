@@ -18,7 +18,7 @@ return {
 				-- overlapping with Pyright's linting.
 				--
 				-- To know more about linters supported by Ruff, execute: ruff linter
-				select = { "E", "I", "SIM", "B", "S", "N" },
+				select = { "E", "I", "SIM", "B", "S" }, -- "N" for styling
 			},
 		},
 	},
