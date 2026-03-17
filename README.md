@@ -14,10 +14,11 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
 4. debugger (because i code in languages other than RUST)
 
 ## When you add a new language
-- treesitter
-- lsp (linter and/or formatter builtin or not?)
-- formatter
-- linter
+Make sure to consider the following and add the proper configurations to the associated files.
+1. treesitter
+2. lsp (linter and/or formatter builtin or not?)
+3. formatter
+4. linter
 
 ## Requirements
 These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree/main)
@@ -25,9 +26,9 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - C compiler
 - ripgrep
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
-- npm (for lsps and formatters)
+- npm (for downloading lsps and formatters)
 - xclip (for yanking to clipboard)
-- cargo (for tree-sitter-cli and rust_analyzer)
+- cargo (for rust_analyzer and formatter)
 
 ## Personal Set-up
 - Linux Mint
