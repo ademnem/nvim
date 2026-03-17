@@ -35,6 +35,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- COPY TO SYSTEM CLIPBOARD
-vim.keymap.set({ "n", "v" }, "<C-y>", '"+y')
-vim.keymap.set({ "n", "v" }, "<C-p>", '"+p')
-vim.keymap.set({ "n", "v" }, "<C-d>", '"+d')
+vim.keymap.set({ "n", "x" }, "<C-y>", '"+y')
+vim.keymap.set({ "n", "x" }, "<C-p>", '"+p')
+vim.keymap.set({ "n", "x" }, "<C-d>", '"+d')

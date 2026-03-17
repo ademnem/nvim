@@ -7,12 +7,11 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
 1. learn builtin grep across file function (change to use ripgrep)
     - :h grep 
     - :copen for quickfix list
+    - but i really like telescope D:
 2. ultimately make config more simple and reliant on builtin functionalities 
     - vim.pack()
-3. treesitter latex
-    - some issue with tree-sitter-cli download
-4. probably learn snippets
-5. debugger (because i code in languages other than RUST)
+3. probably learn snippets
+4. debugger (because i code in languages other than RUST)
 
 ## When you add a new language
 - treesitter
@@ -22,7 +21,7 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
 
 ## Requirements
 These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree/main)
-- neovim >= 0.11.0 (download from source)
+- neovim >= 0.12.0 (download from source, just `source installation.sh`)
 - C compiler
 - ripgrep
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
