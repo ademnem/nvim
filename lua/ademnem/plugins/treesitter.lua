@@ -10,6 +10,7 @@ return {
 				ensure_installed = {
 					"c",
 					"cpp",
+					-- "latex",
 					"lua",
 					"luadoc",
 					"make",

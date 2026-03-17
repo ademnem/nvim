@@ -8,6 +8,11 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
     - :h grep 
     - :copen for quickfix list
 2. ultimately make config more simple and reliant on builtin functionalities 
+    - vim.pack()
+3. treesitter latex
+    - some issue with tree-sitter-cli download
+4. probably learn snippets
+5. debugger (because i code in languages other than RUST)
 
 ## When you add a new language
 - treesitter
@@ -23,13 +28,7 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
 - npm (for lsps and formatters)
 - xclip (for yanking to clipboard)
-
-
-## Future Additions
-- treesitter got updates so now i need to reconfigure that (update to main branch for more updates)
-- debugger (because i code in languages other than RUST)
-- probably learn how to configure snippets
-- lualine shows commands (use [noice.nvim](https://github.com/nvim-lualine/lualine.nvim/issues/868)) and cmdheight = 0
+- cargo (for tree-sitter-cli and rust_analyzer)
 
 ## Personal Set-up
 - Linux Mint

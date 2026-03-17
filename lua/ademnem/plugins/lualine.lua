@@ -3,6 +3,8 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	event = "VeryLazy",
 	config = function()
+		-- to make lualine and cmdline all one line, set option cmdheight=0
+
 		local rose_pine = require("lualine.themes.rose-pine")
 		rose_pine.normal.c.fg = ""
 		-- Extend terminal here after you figure out what color you want (lime green?)
