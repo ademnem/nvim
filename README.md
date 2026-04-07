@@ -10,6 +10,7 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
     - but i really like telescope D:
 2. ultimately make config more simple and reliant on builtin functionalities 
     - vim.pack()
+    - vim.treesitter (because nvim-treesitter is not a public archive)
 3. probably learn snippets
 4. debugger (because i code in languages other than RUST)
 
