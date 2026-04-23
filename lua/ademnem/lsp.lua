@@ -1,3 +1,7 @@
+-- CONFIG EXAMPLES
+-- LSP: https://github.com/neovim/nvim-lspconfig/tree/master/lsp
+-- FORMATTER: https://github.com/stevearc/conform.nvim/tree/master/lua/conform/formatters
+
 local lsp_configs = {}
 for _, f in pairs(vim.api.nvim_get_runtime_file("lua/ademnem/lspconfig/*.lua", true)) do
 	local server_name = vim.fn.fnamemodify(f, ":t:r")
@@ -31,7 +35,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- Auto-format ("lint") on save.
 		-- Usually not needed if server supports "textDocument/willSaveWaitUntil".
-		-- check nvim-lspconfig/lsp for config help
 		if
 			not client:supports_method("textDocument/willSaveWaitUntil")
 			and client:supports_method("textDocument/formatting")

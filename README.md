@@ -29,7 +29,7 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
 - npm (for downloading lsps and formatters)
 - xclip (for yanking to clipboard)
-- cargo (for rust_analyzer and formatter)
+- cargo (for rust_analyzer, rustfmt, clippy, and tree-sitter-cli)
 
 ## Personal Set-up
 - Linux Mint

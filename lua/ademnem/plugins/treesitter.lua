@@ -1,10 +1,16 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "main", -- "main" is different from "master" for this plugin, "main" is the rewrite and more recent
+	branch = "main",  -- "main" is different from "master" for this plugin, "main" is the rewrite and more recent
 	lazy = false,
 	build = ":TSUpdate", -- does not support lazy loading
 	config = function()
-		local ensure_installed = { "rust", "python", "cpp", "latex" }
+		local ensure_installed = {
+			"cpp",
+			"latex",
+			"nix",
+			"python",
+			"rust",
+		}
 		local treesitter = require("nvim-treesitter")
 
 		-- Makes sure we install is called on languages that aren't installed already
