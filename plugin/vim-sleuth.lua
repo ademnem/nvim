@@ -1,6 +1,4 @@
-return {
-	"tpope/vim-sleuth",
-}
+vim.pack.add({ { src = "https://github.com/tpope/vim-sleuth", name = "vim-sleuth" } })
 
 --[[ https://github.com/tpope/vim-sleuth
 This plugin automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file,
