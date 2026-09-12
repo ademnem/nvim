@@ -8,11 +8,8 @@ Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if 
     - :h grep 
     - :copen for quickfix list
     - but i really like telescope D:
-2. ultimately make config more simple and reliant on builtin functionalities 
-    - vim.pack()
-    - vim.treesitter (because nvim-treesitter is not a public archive)
-3. probably learn snippets
-4. debugger (because i code in languages other than RUST)
+2. probably learn snippets
+3. debugger (because i code in languages other than RUST)
 
 ## When you add a new language
 Make sure to consider the following and add the proper configurations to the associated files.
@@ -29,10 +26,10 @@ These will not be managed by [lazy.nvim](https://github.com/folke/lazy.nvim/tree
 - nerd font (I prefer [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads))
 - npm (for downloading lsps and formatters)
 - xclip (for yanking to clipboard)
-- cargo (for rust_analyzer, rustfmt, clippy, and tree-sitter-cli)
+- cargo (for rust_analyzer, rustfmt, clippy)
 
 ## Personal Set-up
-- Linux Mint
+- Linux Fedora
 - block cursor, no blinking
 - aliases in .bashrc
     - `alias vim=nvim`
@@ -55,4 +52,4 @@ Now if you are using Windows and WSL2 then you need to download a [Nerd Font](ht
 - just [TJ DeVries](https://github.com/tjdevries) (for everything, great youtube videos)
 - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) (most beginner friendly setup, easy to read and follow along)
 - [folke's dot files](https://github.com/folke/dot) (makes everything in neovim)
-- just at nvim plugins and see how they use builtin vim functions
+- just look at nvim plugins and see how they use builtin vim functions
