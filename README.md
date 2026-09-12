@@ -2,6 +2,7 @@
 These are my current configurations for Neovim. You are more than welcome to copy if you would like but these configurations are constantly changing so copy at your own risk. I highly recommend learning on your own from the ground up for a better experience :D.
 
 Use [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/tree/master) if you want somewhere to start.
+Try to learn vim.pack [here](https://echasnovski.com/blog/2026-03-13-a-guide-to-vim-pack#hooks-install).
 
 ## TODO
 1. learn builtin grep across file function (change to use ripgrep)
