@@ -18,8 +18,8 @@ vim.pack.add({
 })
 -- for future configurations :help lspconfig-all
 local servers = {
+	phpactor = {}, -- php lsp
 	pyright = {}, -- python lsp
-
 	stylua = {}, -- lua formatter
 	-- Special Lua Config, as recommended by neovim help docs
 	lua_ls = { -- lua lsp
