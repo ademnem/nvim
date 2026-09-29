@@ -5,9 +5,7 @@ vim.g.maplocalleader = "\\"
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- removed in favor of oil.nvim
 vim.keymap.set("n", "<leader>vs", vim.cmd.vs)
 vim.keymap.set("n", "<leader>hs", vim.cmd.sp)
-
 -- "* or "+ for copy into clipboard?
-
 -- TERMINAL
 vim.api.nvim_create_autocmd("TermOpen", {
 	group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
@@ -33,8 +31,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.hl.on_yank()
 	end,
 })
-
--- COPY TO SYSTEM CLIPBOARD
-vim.keymap.set({ "n", "x", "v" }, "<C-y>", '"+y') -- copy to system clipboard
-vim.keymap.set({ "n", "x", "v" }, "<C-p>", '"+p') -- paste from system clipboard
-vim.keymap.set({ "n", "x", "v" }, "<C-d>", '"+d') -- delete and send to system clipboard

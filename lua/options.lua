@@ -1,5 +1,8 @@
 -- Set Options File
 
+-- Clipboard
+vim.opt.clipboard = "unnamedplus,unnamed" -- sync neovim and system clipboard
+
 -- Visuals
 vim.opt.guicursor = "n:blinkon0"
 vim.opt.cursorline = true
