@@ -18,7 +18,7 @@ vim.pack.add({
 })
 -- for future configurations :help lspconfig-all
 local servers = {
-	phpactor = {}, -- php lsp
+	intelephense = {}, -- php lsp
 	pyright = {}, -- python lsp
 	stylua = {}, -- lua formatter
 	-- Special Lua Config, as recommended by neovim help docs
@@ -57,6 +57,7 @@ local servers = {
 			},
 		},
 	},
+	ts_ls = {}, -- javascript and typescript lsp
 }
 
 vim.api.nvim_create_autocmd("LspAttach", {
