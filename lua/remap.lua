@@ -35,6 +35,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- COPY TO SYSTEM CLIPBOARD
-vim.keymap.set({ "n", "x" }, "<C-y>", '"+y')
-vim.keymap.set({ "n", "x" }, "<C-p>", '"+p')
-vim.keymap.set({ "n", "x" }, "<C-d>", '"+d')
+vim.keymap.set({ "n", "x", "v" }, "<C-y>", '"+y') -- copy to system clipboard
+vim.keymap.set({ "n", "x", "v" }, "<C-p>", '"+p') -- paste from system clipboard
+vim.keymap.set({ "n", "x", "v" }, "<C-d>", '"+d') -- delete and send to system clipboard
